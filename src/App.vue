@@ -1,13 +1,16 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import IconHelp from './components/icons/IconHelp.vue'
+import IconDropper from './components/icons/IconDropper.vue'
+import IconUser from './components/icons/IconUser.vue'
 </script>
 
 <template>
   <header class="navbar">
     <nav>
-      <RouterLink to="/">Inicio</RouterLink>
-      <RouterLink to="/questions">Preguntas frecuentes</RouterLink>
-      <RouterLink to="/account">Cuenta</RouterLink>
+      <RouterLink to="/"><IconDropper /> Toma diaria</RouterLink>
+      <RouterLink to="/questions"> <IconHelp /> Preguntas frecuentes</RouterLink>
+      <RouterLink to="/account"><IconUser /> Cuenta</RouterLink>
     </nav>
   </header>
 

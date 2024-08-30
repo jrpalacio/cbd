@@ -31,6 +31,8 @@ a,
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
+  display: flex;
+  gap: 0.8rem;
 }
 
 @media (hover: hover) {
