@@ -1,41 +1,37 @@
-<template>
-  <div>
-    <h1>{{ currentDate }}</h1>
-    <h2>{{ currentTime }}</h2>
-  </div>
-</template>
-
 <script>
+import { LANG, OPTIONS } from '@/constants/date_config'
+
 export default {
   data() {
     return {
-      currentDate: '',
-      currentTime: ''
+      longDateString: new Date().toLocaleDateString(LANG, OPTIONS),
+      time: ''
     }
   },
   mounted() {
     this.getCurrentDateTime()
     setInterval(this.getCurrentDateTime, 1000)
   },
+
   methods: {
     getCurrentDateTime() {
       const now = new Date()
-      this.currentDate = now.toLocaleDateString()
-      this.currentTime = now.toLocaleTimeString()
+      this.time = now.toLocaleTimeString(LANG)
     }
   }
 }
 </script>
 
-<style scoped>
-h1 {
-  font-size: 24px;
-  font-weight: bold;
-}
+<template>
+  <header class="header__time">
+    <p>{{ longDateString }}</p>
+    <h1>{{ time }}</h1>
+  </header>
+</template>
 
-h2 {
-  font-size: 18px;
-  font-weight: normal;
-  color: gray;
+<style scoped>
+.header__time {
+  text-align: center;
+  padding: 2rem;
 }
 </style>
