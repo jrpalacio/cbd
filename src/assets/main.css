@@ -7,15 +7,8 @@
   grid-template-columns: 18rem 1fr;
 }
 
-@media (max-width: 800px) {
-  #app {
-    grid-template-areas: 'main' 'navbar';
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4rem;
-  }
-}
-
 .navbar {
+  background-color: #242424;
   grid-area: navbar;
   padding: 0.8rem;
 
@@ -42,5 +35,48 @@ a,
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (max-width: 800px) {
+  #app {
+    grid-template-areas: 'main' 'navbar';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4rem;
+  }
+
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+
+    & nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+}
+/*
+para la navegación de dispositivos móviles, se utilizan 
+*/
+@media (max-width: 600px) {
+  .navbar {
+    & nav {
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+    }
+    & nav > a {
+      padding: 0.375rem 2rem;
+    }
+  }
+  .navbar nav > a {
+    & span {
+      display: none;
+    }
   }
 }

@@ -8,9 +8,9 @@ import IconUser from './components/icons/IconUser.vue'
 <template>
   <header class="navbar">
     <nav>
-      <RouterLink to="/"><IconDropper /> Toma diaria</RouterLink>
-      <RouterLink to="/questions"> <IconHelp /> Preguntas frecuentes</RouterLink>
-      <RouterLink to="/account"><IconUser /> Cuenta</RouterLink>
+      <RouterLink to="/"><IconDropper /> <span>Toma diaria</span></RouterLink>
+      <RouterLink to="/questions"> <IconHelp /> <span>Preguntas frecuentes</span></RouterLink>
+      <RouterLink to="/account"><IconUser /> <span>Mi perfil</span></RouterLink>
     </nav>
   </header>
 
