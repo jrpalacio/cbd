@@ -21,7 +21,7 @@ import IconUser from './components/icons/IconUser.vue'
 
 <style scoped>
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: rgba(60, 60, 60.29);
 }
 
 nav a.router-link-exact-active:hover {
