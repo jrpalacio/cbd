@@ -8,7 +8,7 @@ import IconUser from './components/icons/IconUser.vue'
 <template>
   <header class="navbar">
     <nav>
-      <RouterLink to="/"><IconDropper /> <span>Toma diaria</span></RouterLink>
+      <RouterLink to="/"> <IconDropper /> <span>Toma diaria</span> </RouterLink>
       <RouterLink to="/questions"> <IconHelp /> <span>Preguntas frecuentes</span></RouterLink>
       <RouterLink to="/account"><IconUser /> <span>Mi perfil</span></RouterLink>
     </nav>
@@ -26,8 +26,5 @@ nav a.router-link-exact-active {
 
 nav a.router-link-exact-active:hover {
   background-color: transparent;
-}
-
-@media (min-width: 1024px) {
 }
 </style>

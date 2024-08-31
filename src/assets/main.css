@@ -8,23 +8,23 @@
 }
 
 .navbar {
-  background-color: #242424;
   grid-area: navbar;
-  padding: 0.8rem;
+  padding: 1rem;
+  background-color: #242424;
 
   & nav {
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 1rem;
   }
 }
+
 .main {
   grid-area: main;
   padding: 1rem;
 }
 
-a,
-.green {
+a {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
@@ -56,27 +56,29 @@ a,
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      align-items: center;
+
+      & a {
+        padding: 0.375rem 2rem;
+      }
     }
   }
 }
+
 /*
-para la navegación de dispositivos móviles, se utilizan 
+  para la navegación en dispositivos móviles, solo se renderizará el icono 
+  de cada enlace, y no el texto, para ahorrar espacio en la pantalla
 */
-@media (max-width: 600px) {
+@media (max-width: 666px) {
   .navbar {
     & nav {
       justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 0;
-    }
-    & nav > a {
-      padding: 0.375rem 2rem;
-    }
-  }
-  .navbar nav > a {
-    & span {
-      display: none;
+
+      & a {
+        & span {
+          display: none;
+        }
+      }
     }
   }
 }
