@@ -1,0 +1,323 @@
+{
+  "locations": [
+    {
+      "estado": "CIUDAD DE MÉXICO",
+      "city": "COYOACAN",
+      "contact": "ADÁN NIETO",
+      "address": "Hacienda Santo Tomas 71 B CTM Culhuacán, Coyoacán, C.P. 04939",
+      "phone": "5561813312",
+      "hours": [
+        {
+          "days": "Lunes a Viernes",
+          "time": "10:00 am a 6:00 pm"
+        },
+        {
+          "days": "Sábado",
+          "time": "10:00 am a 2:00 pm"
+        }
+      ],
+      "services": ["ASESORIA MÉDICA"]
+    },
+    {
+      "estado": "CIUDAD DE MÉXICO",
+      "city": "MOMENTOS MÁGICOS, METRO CHABACANO",
+      "contact": "JOSÉ SHAMIR PÉREZ C.",
+      "address": "Calz. Chabacano, Número 43 Local 6, Col. Asturias, Cuauhtémoc, C.P. 06890",
+      "phone": "5548975015",
+      "hours": [
+        {
+          "days": "Lunes a Viernes",
+          "time": "10:00 am a 9:00 pm"
+        },
+        {
+          "days": "Sábado",
+          "time": "11:00 am a 8:00 pm"
+        },
+        {
+          "days": "Domingo",
+          "time": "11:00 am a 6:00 pm"
+        }
+      ],
+      "services": []
+    },
+    {
+      "estado": "CIUDAD DE MÉXICO",
+      "city": "TLAHUAC",
+      "contact": "MANUEL VIDAL",
+      "address": "Av. Tlahuac Núm. 44 Col. San Lorenzo Tezonco, Del. Iztapalapa C.P. 09040",
+      "phone": "5518555062",
+      "hours": [
+        {
+          "days": "Lunes a Sábado",
+          "time": "11:00 am a 7:00 pm"
+        }
+      ],
+      "services": []
+    },
+
+    {
+      "estado": "CIUDAD DE MÉXICO",
+      "city": "ACOXPA",
+      "contact": "MÓNICA OSORNO",
+      "address": "5ta cerrada de Francisco I Madero no. 19 Col. Viejo Ejido de Santa Úrsula Coapa Alcaldía Coyoacán. C.P. 04980",
+      "phone": "5536551148",
+      "hours": [
+        {
+          "days": "Lunes a Viernes",
+          "time": "9:00 am a 1:00 pm y 4:00 pm a 7:00 pm"
+        },
+        {
+          "days": "Sábado",
+          "time": "10:00 am a 6:00 pm"
+        },
+        {
+          "days": "Domingo",
+          "time": "10:00 am a 2:00 pm"
+        }
+      ],
+      "services": ["CENTRO DE RECOLECCIÓN"]
+    },
+    {
+      "estado": "ESTADO DE MÉXICO",
+      "city": "CUAUTITLAN IZCALLI",
+      "contact": "LUZ RODRIGUEZ",
+      "address": "Calle: Ing Luis de la Peña # 41A Colonia Sección Parques C.P. 54720",
+      "phone": "5548793353",
+      "hours": [
+        {
+          "days": "Lunes a Viernes",
+          "time": "3:00 pm a 6:00 pm"
+        }
+      ],
+      "services": ["ASESORIA MÉDICA"]
+    },
+    {
+      "estado": "ESTADO DE MÉXICO",
+      "city": "NEZAHUALCÓYOTL",
+      "contact": "EDGAR PAZ",
+      "address": "Calle: Ardilla # 227 Colonia Benito Juárez C.P. 57000",
+      "phone": "5620837737",
+      "hours": [
+        {
+          "days": "Lunes a Viernes",
+          "time": "10:00 am a 6:00 pm"
+        },
+        {
+          "days": "Sábado",
+          "time": "10:00 am a 3:00 pm"
+        }
+      ],
+      "services": ["CENTRO DE RECOLECCIÓN"]
+    },
+    {
+      "estado": "ESTADO DE MÉXICO",
+      "city": "ATIZAPAN DE ZARAGOZA",
+      "contact": "GIOVANNI PACHECO",
+      "address": "Fresnos No.17, Col.Atizapan Moderno C.P. 52910",
+      "phone": "5539349117",
+      "hours": [
+        {
+          "days": "Lunes a Sábado",
+          "time": "9:00 am a 8:00 pm"
+        }
+      ],
+      "services": ["CENTRO DE RECOLECCIÓN"]
+    },
+    {
+      "estado": "ESTADO DE MÉXICO",
+      "city": "COACALCO",
+      "contact": "ESTHER GUZMAN",
+      "address": "Geranios 403 Villa de las Flores. Coacalco. Estado de México C.P. 55710",
+      "phone": "5518491826",
+      "hours": [
+        {
+          "days": "Lunes a Viernes",
+          "time": "10:00 am a 6:00 pm"
+        },
+        {
+          "days": "Sábado",
+          "time": "10:00 am a 2:00 pm"
+        }
+      ],
+      "services": ["CENTRO DE RECOLECCIÓN"]
+    },
+    {
+      "estado": "ESTADO DE MÉXICO",
+      "city": "CHIMALHUACAN",
+      "contact": "JUAN CARLOS HERRERA",
+      "address": "Acalote Mz 2 Lt 1 Barrio Xochitenco, Chimalhuacán Edo. De México C.P. 56360",
+      "phone": "5655927492",
+      "hours": [
+        {
+          "days": "Lunes a Sábado",
+          "time": "1:00 pm a 7:00 pm"
+        }
+      ],
+      "services": []
+    },
+    {
+      "estado": "ESTADO DE MÉXICO",
+      "city": "TOLUCA",
+      "contact": "ALEJANDRA OSORNO",
+      "address": "Calzada San Juan 104 Plazas. San buenaventura C.P. 50110",
+      "phone": "7224706006",
+      "hours": [
+        {
+          "days": "Lunes a Viernes",
+          "time": ["9:00 am a 3:00 pm", "5:00 pm a 6:30 pm"]
+        },
+        {
+          "days": "Sábado",
+          "time": "9:00 am a 1:00 pm"
+        }
+      ],
+      "services": ["ASESORIA MÉDICA"]
+    },
+    {
+      "estado": "GUERRERO",
+      "city": "TLAPA DE COMONFORT",
+      "contact": "RODRIGO ZARATE DIAZ",
+      "address": "Avenida deportiva esquina calle hacienda colonia caltitlan C.P. 41300",
+      "phone": "7571128140",
+      "hours": [
+        {
+          "days": "Lunes a Viernes",
+          "time": "9:00 am a 2:00 pm"
+        },
+        {
+          "days": "Sábado",
+          "time": "9:00 am a 2:30 pm"
+        }
+      ],
+      "services": []
+    },
+    {
+      "estado": "GUERRERO",
+      "city": "CHILPANCINGO",
+      "contact": "JUAN CARLOS ALCOCER PARRA",
+      "address": "Calle abasolo numero 89 C.P. 39000",
+      "phone": "7471275396",
+      "hours": [
+        {
+          "days": "Lunes a Sábado",
+          "time": "10:30 am a 6:00 pm"
+        }
+      ],
+      "services": []
+    },
+    {
+      "estado": "CHIHUAHUA",
+      "city": "CHIHUAHUA, CHIH",
+      "contact": "VIOLETA ZESATI",
+      "address": "Priv Heroico Colegio Militar #6708. Col Nombre de Dios Chihuahua, Chih C.P. 31150",
+      "phone": "6291234301",
+      "hours": [
+        {
+          "days": "Lunes a Viernes",
+          "time": "9:00 am a 7:00 pm"
+        },
+        {
+          "days": "Sábado",
+          "time": "10:00 am a 2:00 pm"
+        }
+      ],
+      "services": ["CENTRO DE RECOLECCIÓN"]
+    },
+    {
+      "estado": "GUADAALAJARA",
+      "city": "CENTRO",
+      "contact": "VERONICA TRUJILLO",
+      "address": "C. Pedro Moreno 674, zona centro C.P. 44100",
+      "phone": "3329030784",
+      "hours": [
+        {
+          "days": "Lunes a Viernes",
+          "time": "12:00 pm a 6:00 pm"
+        }
+      ],
+      "services": []
+    },
+    {
+      "estado": "YUCATÁN",
+      "city": "MÉRIDA, YUCATÁN",
+      "contact": "MANUEL TAPIA",
+      "address": "Calle 24C 97C , Colonia Itzimna x 21 y 17 C.P. 97100",
+      "phone": "5573458031",
+      "hours": [
+        {
+          "days": "Lunes a Viernes",
+          "time": "10:00 am a 7:00 pm"
+        }
+      ],
+      "services": []
+    },
+    {
+      "estado": "NUEVO LEÓN",
+      "city": "SAN NICOLAS, NUEVO LEÓN",
+      "contact": "GISELLE PARTIDA",
+      "address": "Rio Balsas 604 Villas de Casa Blanca San Nicolas de Los Garza Monterrey, C.P. 66475",
+      "phone": "8113851351",
+      "hours": [
+        {
+          "days": "Lunes a Viernes",
+          "time": "10:00 am a 6:00 pm"
+        },
+        {
+          "days": "Sábado",
+          "time": "9:00 am a 10:00 pm"
+        },
+        {
+          "days": "Domingo",
+          "time": "10:00 am a 2:00 pm"
+        }
+      ],
+      "services": []
+    },
+    {
+      "estado": "NUEVO LEÓN",
+      "city": "MONTERREY CENTRO",
+      "contact": "ALAN ALEXANDER AGUILAR",
+      "address": "Av. Benito Juárez 101, Centro, C.P. 64000 Monterrey, N.L. Local 166 Planta baja.",
+      "phone": "8117910015",
+      "hours": [
+        {
+          "days": "Lunes a Domingo",
+          "time": "10:00 am a 7:00 pm"
+        }
+      ],
+      "services": []
+    },
+    {
+      "estado": "PUEBLA",
+      "city": "PUEBLA",
+      "contact": "JAVIER RENDON",
+      "address": "Niza 4507 Arcos del Sur Puebla Puebla, C.P.72176",
+      "phone": "2441145721",
+      "hours": [
+        {
+          "days": "Lunes a Viernes",
+          "time": "10:00 am a 6:00 pm"
+        },
+        {
+          "days": "Sábado",
+          "time": "10:00 am a 3:00 pm"
+        }
+      ],
+      "services": []
+    },
+    {
+      "estado": "PUEBLA",
+      "city": "PUEBLA, CENTRO",
+      "contact": "MIGUEL CUEVAS",
+      "address": "Calle 107 A LOTE 630 MZNA 1 CASA 8. Col. RANCHO CHAPULCO, C.P.72494",
+      "phone": "2215708656",
+      "hours": [
+        {
+          "days": "Lunes a Sábado",
+          "time": "9:00 am a 2:00 pm"
+        }
+      ],
+      "services": ["CENTRO DE RECOLECCIÓN"]
+    }
+  ]
+}
