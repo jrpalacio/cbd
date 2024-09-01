@@ -13,25 +13,32 @@ defineProps({
 </script>
 
 <template>
-  <ul class="content--list">
-    <li v-for="(itemList, index) in cbdRegisterList" v-bind:key="index">
-      <div class="horizontal--direction">
-        <figure class="image">
-          <img :src="IcoMarihuana" alt="Marihuana" />
-        </figure>
+  <section class="section">
+    <div class="content--button space--between">
+      <h2>Historial de tomas</h2>
+      <button>Agregar toma</button>
+    </div>
+    <hr />
+    <ul class="content--list">
+      <li v-for="(itemList, index) in cbdRegisterList" v-bind:key="index">
+        <div class="horizontal--direction">
+          <figure class="image">
+            <img :src="IcoMarihuana" alt="Marihuana" />
+          </figure>
 
-        <div class="info">
-          <h3>Toma diaria de CBD</h3>
-          <p>
-            <DropLabel :portion="itemList.portion" /> |
-            {{ timestampToDateTime(itemList.timestamp) }}
-          </p>
+          <div class="info">
+            <h3>Toma diaria de CBD</h3>
+            <p>
+              <DropLabel :portion="itemList.portion" /> |
+              {{ timestampToDateTime(itemList.timestamp) }}
+            </p>
+          </div>
         </div>
-      </div>
 
-      <ChevronRight />
-    </li>
-  </ul>
+        <ChevronRight />
+      </li>
+    </ul>
+  </section>
 </template>
 
 <style scoped>
@@ -53,6 +60,43 @@ li {
 li:hover {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 18px;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 1px;
+  background-color: #2d323a;
+  width: 100%;
+}
+
+button {
+  background-color: #ec7357;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.019rem;
+}
+button:hover {
+  background-color: #f5a69e;
+}
+.section {
+  padding: 0 4rem;
+}
+
+.content--button {
+  padding: 1rem 0;
+}
+
+.space--between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .horizontal--direction {
@@ -79,7 +123,8 @@ li:hover {
 .content--list {
   display: flex;
   flex-direction: column;
-  padding: 0 4rem;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
   & li {
     display: flex;
     justify-content: space-between;
@@ -95,7 +140,7 @@ li:hover {
   justify-content: center;
 }
 @media (max-width: 800px) {
-  .content--list {
+  .section {
     padding: 0;
   }
 }
