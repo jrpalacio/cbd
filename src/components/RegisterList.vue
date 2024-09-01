@@ -41,7 +41,9 @@ export default {
         </p>
 
         <p>
-          <strong>{{ itemList.portion }}</strong> gota
+          <strong>{{ itemList.portion }}</strong>
+          <template v-if="itemList.portion === 1"> gota</template>
+          <template v-else> gotas</template>
         </p>
       </div>
       <div className="cbd__card--show">
@@ -52,6 +54,10 @@ export default {
 </template>
 
 <style scoped>
+.space--between {
+  display: flex;
+  justify-content: space-between;
+}
 .list {
   display: flex;
   flex-direction: column;
@@ -106,5 +112,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 480px) {
+  .space--between {
+    flex-direction: column;
+  }
 }
 </style>

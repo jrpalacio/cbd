@@ -1,11 +1,11 @@
 <script>
 import TimeHeader from '@/components/TimeHeader.vue'
-import RegisterList from '@/components/RegisterList.vue'
+import CbdList from '@/components/CbdList.vue'
 
 export default {
   components: {
     TimeHeader,
-    RegisterList
+    CbdList
   },
 
   data() {
@@ -32,6 +32,6 @@ export default {
 <template>
   <div>
     <TimeHeader />
-    <RegisterList :list="test" />
+    <CbdList :cbdRegisterList="test" />
   </div>
 </template>
