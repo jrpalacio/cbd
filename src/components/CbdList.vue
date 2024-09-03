@@ -130,7 +130,8 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 0;
+    padding: 1rem;
+    cursor: pointer;
   }
 }
 
