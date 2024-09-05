@@ -1,18 +1,20 @@
 <script setup>
-import { storeToRefs } from 'pinia'
-
 import { timestampToDateTime } from '../utils/date_operations'
 import DropLabel from './DropLabel.vue'
 import IconMinus from './icons/IconMinus.vue'
 import IconPlus from './icons/IconPlus.vue'
+
 import { useCbdStore } from '@/stores/cbd'
 
 const cbd = useCbdStore()
-const { portion } = storeToRefs(cbd)
 const { increment, decrement } = cbd
 
 defineProps({
   timestamp: {
+    type: Number,
+    required: true
+  },
+  portion: {
     type: Number,
     required: true
   }

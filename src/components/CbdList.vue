@@ -16,28 +16,33 @@ defineProps({
   <section class="section">
     <div class="content--button space--between">
       <h2>Historial de tomas</h2>
-      <button>Agregar toma</button>
+      <slot name="button"></slot>
     </div>
     <hr />
-    <ul class="content--list">
-      <li v-for="(itemList, index) in cbdRegisterList" v-bind:key="index">
-        <div class="horizontal--direction">
-          <figure class="image">
-            <img :src="IcoMarihuana" alt="Marihuana" />
-          </figure>
+    <template v-if="cbdRegisterList.length === 0">
+      <p>No hay tomas registradas</p>
+    </template>
+    <template v-else>
+      <ul class="content--list">
+        <li v-for="(itemList, index) in cbdRegisterList" v-bind:key="index">
+          <div class="horizontal--direction">
+            <figure class="image">
+              <img :src="IcoMarihuana" alt="Marihuana" />
+            </figure>
 
-          <div class="info">
-            <h3>Toma diaria de CBD</h3>
-            <p>
-              <DropLabel :portion="itemList.portion" /> |
-              {{ timestampToDateTime(itemList.timestamp) }}
-            </p>
+            <div class="info">
+              <h3>Toma diaria de CBD</h3>
+              <p>
+                <DropLabel :portion="itemList.portion" /> |
+                {{ timestampToDateTime(itemList.timestamp) }}
+              </p>
+            </div>
           </div>
-        </div>
 
-        <ChevronRight />
-      </li>
-    </ul>
+          <ChevronRight />
+        </li>
+      </ul>
+    </template>
   </section>
 </template>
 
