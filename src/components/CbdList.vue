@@ -4,12 +4,20 @@ import IcoMarihuana from '@/assets/marihuana.png'
 import ChevronRight from './icons/ChevronRight.vue'
 import DropLabel from './DropLabel.vue'
 
+import { useRouter } from 'vue-router'
+
 defineProps({
   cbdRegisterList: {
     type: Array,
     required: true
   }
 })
+
+const router = useRouter()
+
+function goPage(id) {
+  router.push({ name: 'drop-detail', params: { id } })
+}
 </script>
 
 <template>
@@ -25,7 +33,7 @@ defineProps({
     <template v-else>
       <ul class="content--list">
         <li v-for="(itemList, index) in cbdRegisterList" v-bind:key="index">
-          <div class="horizontal--direction">
+          <a class="horizontal--direction" @click="goPage(itemList.id)">
             <figure class="image">
               <img :src="IcoMarihuana" alt="Marihuana" />
             </figure>
@@ -37,10 +45,10 @@ defineProps({
                 {{ timestampToDateTime(itemList.timestamp) }}
               </p>
             </div>
-          </div>
-          <router-link :to="`/drop-detail/${itemList.id}`">
+          </a>
+          <button type="button">
             <ChevronRight />
-          </router-link>
+          </button>
         </li>
       </ul>
     </template>
@@ -48,6 +56,9 @@ defineProps({
 </template>
 
 <style scoped>
+a {
+  width: 100%;
+}
 h3 {
   font-weight: 500;
   font-size: 1rem;
@@ -116,6 +127,7 @@ button:hover {
   align-items: center;
   width: 64px;
   height: 64px;
+  min-width: 64px;
   border-radius: 18px;
   background-color: rgb(3, 23, 2);
 
@@ -133,8 +145,8 @@ button:hover {
   margin-bottom: 2.5rem;
   & li {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     gap: 1rem;
     padding: 1rem;
     cursor: pointer;
@@ -145,6 +157,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 @media (max-width: 800px) {
   .section {
