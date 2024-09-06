@@ -58,6 +58,7 @@ select {
 
 p {
   text-wrap: pretty;
+  line-height: 1.5;
 }
 
 h1,
@@ -72,4 +73,20 @@ h6 {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+.m__top--xl {
+  margin-top: 4rem;
+}
+.m__top--lg {
+  margin-top: 3rem;
+}
+.m__top--md {
+  margin-top: 2rem;
+}
+.m__top--sm {
+  margin-top: 1rem;
+}
+.m__top--xs {
+  margin-top: 0.5rem;
 }

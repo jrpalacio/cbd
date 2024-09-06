@@ -1,4 +1,4 @@
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { defineStore, storeToRefs } from 'pinia'
 import { useModalStore } from './modal'
 
@@ -9,8 +9,6 @@ export const useCbdStore = defineStore('cbd', () => {
   const portion = ref(1)
   const timestamp = ref(0)
   const timeList = ref([])
-
-  const doublePortion = computed(() => portion.value * 2)
 
   function increment() {
     portion.value++
@@ -43,5 +41,25 @@ export const useCbdStore = defineStore('cbd', () => {
     return id
   }
 
-  return { portion, doublePortion, increment, decrement, addTime, timeList, timestamp }
+  function getItemById(id) {
+    return timeList.value.find((time) => time.id === id)
+  }
+
+  function removeTime(id) {
+    const index = timeList.value.findIndex((time) => time.id === id)
+    if (index !== -1) {
+      timeList.value.splice(index, 1)
+    }
+  }
+
+  return {
+    portion,
+    timeList,
+    timestamp,
+    increment,
+    decrement,
+    addTime,
+    getItemById,
+    removeTime
+  }
 })

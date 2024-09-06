@@ -38,8 +38,9 @@ defineProps({
               </p>
             </div>
           </div>
-
-          <ChevronRight />
+          <router-link :to="`/drop-detail/${itemList.id}`">
+            <ChevronRight />
+          </router-link>
         </li>
       </ul>
     </template>
