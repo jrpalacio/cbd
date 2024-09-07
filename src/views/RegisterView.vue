@@ -65,18 +65,7 @@ button {
 button:hover {
   background-color: #f5a69e;
 }
-.button--modal {
-  background-color: #ec7357;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 0.875rem;
-  letter-spacing: 0.019rem;
-  width: 100%;
-}
+
 .form--content {
   display: flex;
   flex-direction: column;
