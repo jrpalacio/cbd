@@ -10,6 +10,7 @@ import ArrowLeft from '@/components/icons/ArrowLeft.vue'
 import IconDelete from '@/components/icons/IconDelete.vue'
 import marihuana from '@/assets/marihuana.png'
 import { ref } from 'vue'
+import CbdModal from '@/components/CbdModal.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -26,6 +27,7 @@ if (item !== -1) {
   time = new Date(item.timestamp).toLocaleTimeString(LANG, TIME_OPTIONS)
 }
 const portion = ref(item.portion)
+const showModalDetail = ref(false)
 
 function handlePlusPortion() {
   portion.value += 1
@@ -38,6 +40,16 @@ function handleMinusPortion() {
 function handleDelete() {
   removeTime(route.params.id)
   router.push('/')
+}
+function handleCloseModalDetail() {
+  showModalDetail.value = false
+}
+function handleShowModalDetail() {
+  showModalDetail.value = true
+}
+function handleUpdateItem({ id, portion }) {
+  updateItem({ id, portion })
+  showModalDetail.value = false
 }
 </script>
 
@@ -92,9 +104,25 @@ function handleDelete() {
             <IconPlus />
           </button>
         </div>
-        <button type="button" class="button--detail" @click="updateItem({ id: item.id, portion })">
+        <button type="button" class="button--detail" @click="handleShowModalDetail">
           Actualizar dosis
         </button>
+        <CbdModal :show="showModalDetail" @close="handleCloseModalDetail">
+          <template #header>Actulizar dosis</template>
+          <template #body>
+            <p class="modal--descripton">
+              <i
+                >La dosis inicial fue de {{ item.portion }}
+                {{ item.portion > 1 ? 'gotas' : 'gota' }} y la actual es de {{ portion }}
+                {{ portion > 1 ? 'gotas' : 'gota' }}.</i
+              >
+              <strong> ¿Quieres actualizar la dosis de CBD registrada? </strong>
+            </p>
+            <button class="button--modal" @click="handleUpdateItem({ id: item.id, portion })">
+              Actualizar dosis
+            </button>
+          </template>
+        </CbdModal>
       </article>
     </template>
   </section>
