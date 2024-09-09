@@ -9,21 +9,32 @@ import { useCbdStore } from '../stores/cbd'
 import ArrowLeft from '@/components/icons/ArrowLeft.vue'
 import IconDelete from '@/components/icons/IconDelete.vue'
 import marihuana from '@/assets/marihuana.png'
+import { ref } from 'vue'
 
 const route = useRoute()
 const router = useRouter()
 
 const cbd = useCbdStore()
-const { getItemById, removeTime } = cbd
+const { getItemById, removeTime, updateItem } = cbd
 
 const item = getItemById(route.params.id)
+
 let date = ''
 let time = ''
 if (item !== -1) {
   date = new Date(item.timestamp).toLocaleDateString(LANG, DATE_OPTIONS)
   time = new Date(item.timestamp).toLocaleTimeString(LANG, TIME_OPTIONS)
 }
+const portion = ref(item.portion)
 
+function handlePlusPortion() {
+  portion.value += 1
+}
+function handleMinusPortion() {
+  if (portion.value > 1) {
+    portion.value -= 1
+  }
+}
 function handleDelete() {
   removeTime(route.params.id)
   router.push('/')
@@ -64,28 +75,43 @@ function handleDelete() {
       <article class="content--portion">
         <h3>Dosis registrada</h3>
         <p>
-          <small>Utiliza los controles para actulizar la porsión de dosis registrada.</small>
+          <i><small>Utiliza los controles para actulizar la porsión de dosis registrada.</small></i>
         </p>
         <div class="contol--buttons">
-          <button>
+          <button @click="handleMinusPortion">
             <IconMinus />
           </button>
           <p>
-            {{ item.portion }}
-            <template v-if="item.portion > 1">gotas</template>
-            <template v-else>gota</template>
+            <span>{{ portion }}</span>
+            <strong>
+              <template v-if="portion > 1">gotas</template>
+              <template v-else>gota</template>
+            </strong>
           </p>
-          <button>
+          <button @click="handlePlusPortion">
             <IconPlus />
           </button>
         </div>
-        <button>Actualizar dosis</button>
+        <button type="button" class="button--detail" @click="updateItem({ id: item.id, portion })">
+          Actualizar dosis
+        </button>
       </article>
     </template>
   </section>
 </template>
 
 <style scoped>
+.button--detail {
+  background-color: #ec7357;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.019rem;
+}
 .message--error {
   padding: 1rem;
   background-color: #f8d7da;
@@ -108,14 +134,15 @@ function handleDelete() {
 }
 
 .detail {
-  padding: 2rem 1.4rem;
-  border-bottom: 1px solid #e0e0e035;
-  background-color: #ec7357;
-  border-radius: 28px;
+  padding: 0rem 1.4rem;
+  /* border-bottom: 1px solid #e0e0e035;
+  background-color: #ec7357; 
+  border-radius: 28px;*/
 }
 
 .header--title {
-  margin: 0.2rem 0;
+  margin-top: 1.3rem;
+
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -132,18 +159,37 @@ function handleDelete() {
   font-size: 0.9rem;
 }
 .contol--buttons {
+  background-color: transparent;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   margin: 1rem 0;
+  padding: 3rem;
+
+  p {
+    & span {
+      font-size: 1.5rem;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   & button {
-    background-color: transparent;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #242424;
+
+    background-color: rgba(255, 255, 0, 0.091);
     border: none;
     border-radius: 50%;
     cursor: pointer;
     &:hover {
-      background-color: #f8d7da;
+      background-color: #ec7357;
     }
   }
 }

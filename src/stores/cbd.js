@@ -52,6 +52,14 @@ export const useCbdStore = defineStore('cbd', () => {
     }
   }
 
+  function updateItem({ id, portion }) {
+    const index = timeList.value.findIndex((time) => time.id === id)
+    if (index !== -1) {
+      timeList.value[index].portion = portion
+      // timeList.value[index].timestamp = timestamp.value
+    }
+  }
+
   return {
     portion,
     timeList,
@@ -60,6 +68,7 @@ export const useCbdStore = defineStore('cbd', () => {
     decrement,
     addTime,
     getItemById,
-    removeTime
+    removeTime,
+    updateItem
   }
 })
