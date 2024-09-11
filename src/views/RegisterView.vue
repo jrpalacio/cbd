@@ -8,6 +8,7 @@ import TimeHeader from '@/components/TimeHeader.vue'
 import CbdList from '@/components/CbdList.vue'
 import CbdModal from '@/components/CbdModal.vue'
 import DropItem from '@/components/DropItem.vue'
+import ControlDay from '@/components/ControlDay.vue'
 
 const cbd = useCbdStore()
 const { portion, timestamp, timeList } = storeToRefs(cbd)
@@ -32,6 +33,7 @@ function handleCloseModal() {
 
 <template>
   <div>
+    <ControlDay />
     <TimeHeader />
 
     <CbdList :cbdRegisterList="timeList">

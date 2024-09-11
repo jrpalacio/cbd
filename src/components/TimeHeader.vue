@@ -1,10 +1,10 @@
 <script>
-import { LANG, OPTIONS } from '@/constants/date_config'
+import { LANG } from '@/constants/date_config'
 
 export default {
   data() {
     return {
-      longDateString: new Date().toLocaleDateString(LANG, OPTIONS),
+      /* longDateString: new Date().toLocaleDateString(LANG, OPTIONS), */
       time: ''
     }
   },
@@ -24,7 +24,7 @@ export default {
 
 <template>
   <header class="header__time">
-    <p>{{ longDateString }}</p>
+    <!-- <p>{{ longDateString }}</p> -->
     <h1>{{ time }}</h1>
   </header>
 </template>

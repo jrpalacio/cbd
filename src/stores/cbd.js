@@ -63,11 +63,13 @@ export const useCbdStore = defineStore('cbd', () => {
       return timeDate === day
     })
   }
+  // esta función debe de recibir un parametro de tipo Date
   function getDataByDate(date) {
+    const formatDate = typeof date === 'string' ? date : date.toLocaleDateString()
     const storedTimes = JSON.parse(localStorage.getItem('times')) || []
     return storedTimes.filter((time) => {
       const timeDate = new Date(time.timestamp).toLocaleDateString()
-      return timeDate === date
+      return timeDate === formatDate
     })
   }
 
