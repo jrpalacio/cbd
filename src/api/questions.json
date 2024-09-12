@@ -1,0 +1,74 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "¿Qué es el CBD?",
+      "answer": "El CBD es una sustancia que se encuentra en una planta llamada cannabis. A diferencia de otra sustancia de la misma planta que puede hacerte sentir drogado o volado, el CBD no te hace sentir así. Se usa como una medicina natural para aliviar el dolor, la ansiedad y mejorar el sueño, sin efectos psicoactivos."
+    },
+    {
+      "id": 2,
+      "question": "¿Para qué se usa el CBD?",
+      "answer": "El CBD se utiliza para ayudar con varias cosas, como reducir el dolor, calmar los nervios o la ansiedad, mejorar el sueño y bajar la inflamación en el cuerpo."
+    },
+    {
+      "id": 3,
+      "question": "¿El CBD es legal?",
+      "answer": "Sí, el CBD es legal en México. La Ley General de Salud permite el uso de productos con menos del 1% de THC, la sustancia que te hace sentir drogado o volado."
+    },
+    {
+      "id": 4,
+      "question": "¿El CBD es seguro?",
+      "answer": "Sí, el CBD es seguro. No es adictivo y no tiene efectos secundarios graves. Sin embargo, es importante hablar con un médico antes de usarlo, especialmente si estás embarazada, amamantando o tomando otros medicamentos."
+    },
+    {
+      "id": 5,
+      "question": "¿Cómo se toma el CBD?",
+      "answer": "El CBD se puede tomar de varias formas, como aceite, cápsulas, gomitas, cremas o vapor. La forma en que lo tomes dependerá de lo que estés tratando y de cómo te sientas más cómodo."
+    },
+    {
+      "id": 6,
+      "question": "¿Cuánto tiempo tarda en hacer efecto el CBD?",
+      "answer": "El CBD puede tardar entre 30 minutos y 2 horas en hacer efecto, dependiendo de cómo lo tomes y de tu cuerpo. Si no sientes ningún efecto después de 2 horas, puedes tomar otra dosis."
+    },
+    {
+      "id": 7,
+      "question": "¿El CBD puede interactuar con otros medicamentos?",
+      "answer": "Sí, el CBD puede interactuar con otros medicamentos. Por eso es importante hablar con un médico antes de usarlo, especialmente si estás tomando otros medicamentos."
+    },
+    {
+      "id": 8,
+      "question": "¿El CBD puede hacerme sentir drogado o volado?",
+      "answer": "No, el CBD no te hace sentir drogado o volado. A diferencia de otra sustancia de la misma planta que puede hacerte sentir así, el CBD no tiene efectos psicoactivos."
+    },
+    {
+      "id": 9,
+      "question": "¿El CBD es adictivo?",
+      "answer": "No, el CBD no es adictivo. No te hará dependiente de él ni te hará sentirte mal si dejas de tomarlo."
+    },
+    {
+      "id": 10,
+      "question": "¿El CBD es lo mismo que la marihuana?",
+      "answer": "No, el CBD no es lo mismo que la marihuana. Aunque ambos provienen de la misma planta, el CBD no te hace sentir drogado o volado, a diferencia de otra sustancia de la misma planta que sí lo hace."
+    },
+    {
+      "id": 11,
+      "question": "¿El CBD me hará sentir drogado o fuera de control?",
+      "answer": "No, el CBD no te hará sentir drogado ni alterará tu mente. Es diferente del THC, que es la parte del cannabis que causa esos efectos."
+    },
+    {
+      "id": 12,
+      "question": "¿Cuáles son los beneficios de usar CBD?",
+      "answer": "Los beneficios del CBD incluyen aliviar dolores crónicos, calmar la ansiedad, mejorar el sueño, reducir la inflamación y ayudar a relajarte de manera natural."
+    },
+    {
+      "id": 13,
+      "question": "¿Hay algún riesgo o efectos secundarios al usar CBD?",
+      "answer": "Algunos efectos secundarios del CBD pueden ser leves, como sequedad en la boca, sentirte cansado o tener menos apetito. En general, es considerado seguro para la mayoría de las personas."
+    },
+    {
+      "id": 14,
+      "question": "¿Cuánto tiempo tarda en hacer efecto el CBD?",
+      "answer": "El tiempo puede variar dependiendo de cómo lo uses. Si es en gotas o aceites debajo de la lengua, puede tardar entre 15 y 30 minutos en hacer efecto. Si lo tomas en pastillas o comestibles, puede tardar un poco más, como una hora."
+    }
+  ]
+}

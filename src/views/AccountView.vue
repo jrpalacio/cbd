@@ -1,22 +1,10 @@
 <template>
   <div>
-    <h2>User Information</h2>
-    <p>Name: {{ name }}</p>
-    <p>Age: {{ age }}</p>
-    <p>Weight: {{ weight }}</p>
-    <p>Gender: {{ gender }}</p>
+    <a :href="urlShop" target="_blank" rel="noopener noreferrer">Tienda en linea</a>
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      name: 'John Doe',
-      age: 30,
-      weight: 70,
-      gender: 'Male'
-    }
-  }
-}
+<script setup>
+const urlShop =
+  'https://s.happylive.mx:1035/h/iCommerce/templates/Happylive/CarritoCompras/index.jsp?ID=2270'
 </script>

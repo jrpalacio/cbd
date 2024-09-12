@@ -10,7 +10,7 @@ import IconUser from './components/icons/IconUser.vue'
     <nav>
       <RouterLink to="/"> <IconDropper /> <span>Toma diaria</span> </RouterLink>
       <RouterLink to="/questions"> <IconHelp /> <span>Preguntas frecuentes</span></RouterLink>
-      <RouterLink to="/account"><IconUser /> <span>Mi perfil</span></RouterLink>
+      <RouterLink to="/account"><IconUser /> <span>Tienda en linea</span></RouterLink>
     </nav>
   </header>
 
