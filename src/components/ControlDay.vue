@@ -56,12 +56,19 @@ function nextDay() {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   & button {
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
     margin: 0;
+
+    & svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: #ec7357;
+    }
   }
 }
 </style>

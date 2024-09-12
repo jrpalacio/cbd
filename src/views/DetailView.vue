@@ -162,10 +162,10 @@ function handleUpdateItem({ id, portion }) {
 }
 
 .detail {
-  padding: 0rem 1.4rem;
-  /* border-bottom: 1px solid #e0e0e035;
-  background-color: #ec7357; 
-  border-radius: 28px;*/
+  padding: 1rem 1.4rem;
+  border-bottom: 1px solid #e0e0e035;
+  background-color: #ec7357;
+  border-radius: 28px;
 }
 
 .header--title {
