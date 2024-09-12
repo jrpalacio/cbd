@@ -8,6 +8,7 @@ import DropLabel from './DropLabel.vue'
 import CbdModal from './CbdModal.vue'
 import { useRouter } from 'vue-router'
 import { useCbdStore } from '../stores/cbd'
+import canabis from '@/assets/canabis.webp'
 
 defineProps({
   cbdRegisterList: {
@@ -48,12 +49,15 @@ function handleItemDelete(id) {
 <template>
   <section class="section">
     <div class="content--button space--between">
-      <h2>Historial de tomas</h2>
+      <h2>Toma diaria de CBD</h2>
       <slot name="button"></slot>
     </div>
     <hr />
     <template v-if="cbdRegisterList.length === 0">
-      <p>No hay tomas registradas</p>
+      <figure class="figure-canabis">
+        <img :src="canabis" alt="" />
+        <p><i>No hay dosis registradas</i></p>
+      </figure>
     </template>
     <template v-else>
       <ul class="content--list">
@@ -64,7 +68,7 @@ function handleItemDelete(id) {
             </figure>
 
             <div class="info">
-              <h3>Toma diaria de CBD</h3>
+              <h3>Dosis de CBD</h3>
               <p>
                 <DropLabel :portion="itemList.portion" /> |
                 {{ timestampToDateTime(itemList.timestamp) }}
@@ -91,6 +95,14 @@ function handleItemDelete(id) {
 </template>
 
 <style scoped>
+.figure-canabis {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
 a {
   width: 100%;
   display: flex;

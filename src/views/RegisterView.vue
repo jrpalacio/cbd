@@ -10,6 +10,8 @@ import CbdModal from '@/components/CbdModal.vue'
 import DropItem from '@/components/DropItem.vue'
 import ControlDay from '@/components/ControlDay.vue'
 
+import IconDropletPlus from '@/components/icons/IconDropletPlus.vue'
+
 const cbd = useCbdStore()
 const { portion, timestamp, timeList } = storeToRefs(cbd)
 const { addTime } = cbd
@@ -38,12 +40,12 @@ function handleCloseModal() {
 
     <CbdList :cbdRegisterList="timeList">
       <template #button>
-        <button @click="handleShowModal">Agregar toma</button>
+        <button @click="handleShowModal"><IconDropletPlus /></button>
       </template>
     </CbdList>
 
     <CbdModal :show="showModal" @close="handleCloseModal">
-      <template #header>Toma diaria de CBD</template>
+      <template #header>Registrar dosis</template>
       <template #body>
         <DropItem :portion="portion" :timestamp="timestamp" />
         <button class="button--modal" @click="addTime">Agregar</button>

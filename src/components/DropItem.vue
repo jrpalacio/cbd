@@ -28,7 +28,7 @@ defineProps({
     </button>
 
     <div class="info">
-      <h3>Toma diaria de CBD</h3>
+      <h3>Dosis de CBD</h3>
       <p>
         <DropLabel :portion /> |
         {{ timestampToDateTime(timestamp) }}

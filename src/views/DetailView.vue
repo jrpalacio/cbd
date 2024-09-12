@@ -73,7 +73,7 @@ function handleUpdateItem({ id, portion }) {
         </nav>
         <div class="header--title">
           <img :src="marihuana" alt="Icono de marihuana" />
-          <h2>Toma diaria de CBD</h2>
+          <h2>Dosis de CBD registrada</h2>
         </div>
         <!--  <p>Observa el detalle del registro</p> -->
         <div className="space--between">
