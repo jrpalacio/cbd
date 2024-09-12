@@ -58,6 +58,9 @@ function nextDay() {
   align-items: center;
 
   & button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: none;
     border: none;
     cursor: pointer;
