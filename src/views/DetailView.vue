@@ -64,25 +64,29 @@ function handleUpdateItem({ id, portion }) {
     </template>
     <template v-else>
       <header className="detail">
-        <nav class="space--between">
+        <nav class="detail--navigation">
           <router-link :to="'/'">
             <ArrowLeft />
           </router-link>
-          <p>Detalle de la toma</p>
+          <p><small>Detalle de la dosis</small></p>
           <IconDelete @click="handleDelete" />
         </nav>
-        <div class="header--title">
-          <img :src="marihuana" alt="Icono de marihuana" />
-          <h2>Dosis de CBD registrada</h2>
+        <div class="detail--title">
+          <div>
+            <img :src="marihuana" alt="Icono de marihuana" />
+            <h2>Dosis registrada</h2>
+          </div>
+          <p>Aquí encontras el detalle de la dosis, ademas podras editar la cantidad registrada.</p>
         </div>
-        <!--  <p>Observa el detalle del registro</p> -->
+
         <div className="space--between">
           <div className="flex--horizontal">
             <CalendarMonth />
-            <p style="margin-left: 0.5rem">{{ date }}</p>
+            <p>{{ date }}</p>
           </div>
           <p className="time">{{ time }}</p>
         </div>
+        <!--  <p>Observa el detalle del registro</p> -->
       </header>
       <article class="content--portion">
         <h3>Dosis registrada</h3>
@@ -104,9 +108,11 @@ function handleUpdateItem({ id, portion }) {
             <IconPlus />
           </button>
         </div>
-        <button type="button" class="button--detail" @click="handleShowModalDetail">
-          Actualizar dosis
-        </button>
+        <div class="center--button">
+          <button type="button" class="button--detail" @click="handleShowModalDetail">
+            Quiero actualizar la dosis
+          </button>
+        </div>
         <CbdModal :show="showModalDetail" @close="handleCloseModalDetail">
           <template #header>Actulizar dosis</template>
           <template #body>
@@ -129,7 +135,53 @@ function handleUpdateItem({ id, portion }) {
 </template>
 
 <style scoped>
+.detail {
+  background-color: #5784ec;
+  border-radius: 28px;
+  padding: 1rem;
+}
+
+.detail--navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+}
+
+.detail--title {
+  margin: 1.1rem 0;
+
+  & div {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    & img {
+      width: 1.7rem;
+      height: 1.7rem;
+    }
+  }
+}
+.time {
+  color: #5784ec;
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding-inline: 0.5rem;
+  font-size: 0.9rem;
+}
+.center--button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .button--detail {
+  margin-inline: auto;
   background-color: #ec7357;
   color: white;
   border: none;
@@ -161,31 +213,6 @@ function handleUpdateItem({ id, portion }) {
   align-items: center;
 }
 
-.detail {
-  padding: 1rem 1.4rem;
-  border-bottom: 1px solid #e0e0e035;
-  background-color: #ec7357;
-  border-radius: 28px;
-}
-
-.header--title {
-  margin-top: 1.3rem;
-
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  & img {
-    width: 1.7rem;
-    height: 1.7rem;
-  }
-}
-.time {
-  color: #ec7357;
-  background-color: #ffffff;
-  border-radius: 25px;
-  padding-inline: 0.5rem;
-  font-size: 0.9rem;
-}
 .contol--buttons {
   background-color: transparent;
   display: flex;
@@ -223,5 +250,11 @@ function handleUpdateItem({ id, portion }) {
 }
 .content--portion {
   padding: 1.6rem;
+}
+.modal--descripton {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.019rem;
+  margin: 1.2rem 0;
 }
 </style>
