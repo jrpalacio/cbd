@@ -55,8 +55,8 @@ function handleItemDelete(id) {
     <hr />
     <template v-if="cbdRegisterList.length === 0">
       <figure class="figure-canabis">
-        <img :src="canabis" alt="" />
-        <p><i>No hay dosis registradas</i></p>
+        <img :src="canabis" alt="canavis" />
+        <p><i>No hay registro de dosis </i></p>
       </figure>
     </template>
     <template v-else>
